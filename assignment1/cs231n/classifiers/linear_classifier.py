@@ -68,7 +68,7 @@ class LinearClassifier(object):
       class.
     """
     y_pred = np.zeros(X.shape[0])
-    y_pred=np.argmin(X.dot(self.W), axis=1)
+    y_pred=np.argmax(X.dot(self.W), axis=1)
     return y_pred
   
   def loss(self, X_batch, y_batch, reg):
